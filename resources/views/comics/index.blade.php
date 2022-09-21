@@ -16,7 +16,8 @@
           @endforelse
         </div>
         <div class="d-flex justify-content-center">
-          <a href="#" class="blue-button large">LOAD MORE</a>
+          <a href="#" class="blue-button large me-2">LOAD MORE</a>
+          <a href="{{ route('comics.create') }}" class="blue-button large">ADD MORE</a>
         </div>
       </div>
     </div>
