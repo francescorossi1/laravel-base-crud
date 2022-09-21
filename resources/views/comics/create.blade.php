@@ -3,7 +3,8 @@
 @section('main-content')
 <div class="container my-5">
     <div class="row">
-        <form action="store.blade.php" method="POST">
+        <form action="{{ route('comics.store') }}" method="POST">
+            @csrf
             <div class="col-6">
                 <div class="mb-3">
                     <label for="title" class="form-label">Titolo</label>
@@ -26,7 +27,7 @@
             <div class="col-6">
                 <div class="mb-3">
                     <label for="price" class="form-label">Prezzo</label>
-                    <input type="text" class="form-control" id="price" name="price">
+                    <input type="number" class="form-control" id="price" name="price">
                 </div>
             </div>
             <div class="col-6">
@@ -49,8 +50,8 @@
             </div>
             <div class="col-6">
                 <div class="mb-3">
-                    <a href="{{ route('comics.index') }}">Torna indietro</a>
-                    <a href="{{ route('comics.store') }}">Invia</a>
+                    <a href="{{ route('comics.index') }}" class="btn btn-secondary">Torna indietro</a>
+                    <button type="submit" class="btn btn-success">Invia</button>
                 </div>
             </div>
         </form>

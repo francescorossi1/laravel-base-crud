@@ -8,7 +8,7 @@
         <div class="d-flex row row-cols-xl-6 row-cols-lg-4 row-cols-md-3 row-cols-sm-2 flex-wrap justify-content-center py-3">
           @forelse($comics as $comic)
           <figure>
-            <a href="{{ route('comics.show', 0) }}"><img src="{{ $comic['thumb'] }}" alt="{{ $comic['title'] }}"></a>
+            <a href="{{ route('comics.show', ['comic' => $comic->id]) }}"><img src="{{ $comic['thumb'] }}" alt="{{ $comic['title'] }}"></a>
             <figcaption>{{ $comic['series'] }}</figcaption>
           </figure>
           @empty
