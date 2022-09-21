@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", "Open Sans", Helvetica, sans-serif;
+}
+
+img {
+    max-height: 100%;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #303030;
+}
+
+.navbar {
+    height: 100px;
+    font-weight: bold;
+
+    ul li {
+        padding-left: 15px;
+    }
+}
+

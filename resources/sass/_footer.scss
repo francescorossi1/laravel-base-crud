@@ -1,0 +1,65 @@
+footer {
+    background-image: url(../img/footer-bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    h4 {
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+    ul {
+        list-style-type: none;
+        padding: 10px 0;
+        li {
+            margin-bottom: 5px;
+            a {
+                text-decoration: none;
+            }
+        }
+    }
+    article {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        background-color: #0282f9;
+
+        figure {
+            color: #fff;
+            display: flex;
+            align-items: center;
+            flex-basis: 20%;
+        }
+
+        img {
+            max-width: 50px;
+            max-height: 50px;
+        }
+    }
+    .link-list {
+        padding-top: 110px;
+    }
+}
+
+.footer-bg {
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-image: url(../img/dc-logo-bg.png);
+}
+.bottom-footer {
+    height: 100px;
+    background-color: #303030;
+    ul li {
+        padding: 0 10px;
+
+        img {
+            vertical-align: middle;
+        }
+    }
+}
+
+.blue-border-btn {
+    color: #fff;
+    padding: 10px;
+    border: 2px solid #0282f9;
+}
