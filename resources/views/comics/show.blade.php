@@ -11,26 +11,26 @@
       <div class="row pt-5">
         <div class="col cover">
           <figure>
-            <span class="top">{{ $comic['type'] }}</span>
-            <img src="{{ $comic['thumb'] }}" alt="{{ $comic['series'] }}">
+            <span class="top">{{ $comic->type }}</span>
+            <img src="{{ $comic['thumb'] }}" alt="{{ $comic->series }}">
             <span class="bottom">View Gallery</span>
           </figure>
-          <h2>{{ $comic['title'] }}</h2>
+          <h2>{{ $comic->title }}</h2>
           <div class="info d-flex">
             <div class="large">
-              <span class="price">U.S. Price: <strong>{{ $comic['price'] }}</strong></span>
+              <span class="price">U.S. Price: <strong>{{ $comic->price }}</strong></span>
               <span class="available">Available</span>
             </div>
             <div class="check">
               <a href="#">Check Availability</a>
             </div>
           </div>
-          <p>{{ $comic['description'] }}</p>
+          <p>{{ $comic->description }}</p>
         </div>
         <div class="col-4 adv-col">
           <h5>Advertisement</h5>
           <figure class="adv">
-            <img src="{{asset('img/adv.jpg')}}" alt="{{ $comic['series'] }}">
+            <img src="{{asset('img/adv.jpg')}}" alt="{{ $comic->series }}">
           </figure>
         </div>
       </div>
@@ -43,19 +43,23 @@
 
             <div class="type">
               <h6>Series:</h6>
-              <span>{{ $comic['series'] }}</span>
+              <span>{{ $comic->series }}</span>
             </div>
             <hr>
 
             <div class="price">
               <h6>U.S. Price:</h6>
-              <h6>{{ $comic['price'] }}</h6>
+              <h6>{{ $comic->price }}</h6>
             </div>
             <hr>
 
             <div class="sale-date mb-3">
               <h6>On Sale Date:</h6>
-              <h6>{{ date($comic['sale_date']) }}</h6>
+              <h6>{{ date($comic->sale_date) }}</h6>
+            </div>
+            <hr>
+            <div class="mb-4">
+              <a href="{{ route('comics.edit', $comic->id) }}" class="blue-button large">EDIT</a>
             </div>
           </div>
         </div>
