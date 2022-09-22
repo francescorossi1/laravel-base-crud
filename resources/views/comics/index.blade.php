@@ -14,10 +14,10 @@
             </figure>
             <div class="buttons mb-3 d-flex flex-wrap">
               <a href="{{ route('comics.edit', $comic->id) }}" class="blue-button large me-2 my-1">EDIT</a>
-              <form action="{{ route('comics.destroy', $comic->id) }}" method="POST">
+              <form action="{{ route('comics.destroy', $comic->id) }}" method="POST" class="delete">
                 @csrf
                 @method('DELETE')
-                <button class="blue-button large border-0 me-2 my-1">DELETE</a>
+                <button class="blue-button large border-0 me-2 my-1" type="submit">DELETE</a>
               </form>
             </div>
           </div>
@@ -32,4 +32,18 @@
       </div>
     </div>
   </div>
+@endsection
+
+@section('js-script')
+    <script>
+      const deleteForms = document.querySelectorAll('.delete');
+      deleteForms.forEach(form => {
+        form.addEventListener('submit',(e) => {
+          e.preventDefault();
+          const hasConfirmed = confirm('Vuoi davvero eliminare questo elemento?');
+          if(hasConfirmed) form.submit()
+          else return;
+        })
+      });
+    </script>
 @endsection
