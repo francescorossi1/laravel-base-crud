@@ -60,6 +60,11 @@
             <hr>
             <div class="mb-4">
               <a href="{{ route('comics.edit', $comic->id) }}" class="blue-button large">EDIT</a>
+              <form action="{{ route('comics.destroy', $comic->id) }}" method="POST">
+                @csrf
+                @method('DELETE')
+                <button class="blue-button large border-0 me-2 my-1">DELETE</a>
+              </form>
             </div>
           </div>
         </div>

@@ -9,11 +9,16 @@
           @forelse($comics as $comic)
           <div class="col">
             <figure>
-              <a href="{{ route('comics.show', $comic->id) }}"><img src="{{ $comic['thumb'] }}" alt="{{ $comic['title'] }}"></a>
-              <figcaption>{{ $comic['series'] }}</figcaption>
+              <a href="{{ route('comics.show', $comic->id) }}"><img src="{{ $comic->thumb }}" alt="{{ $comic->title }}"></a>
+              <figcaption>{{ $comic->series }}</figcaption>
             </figure>
-            <div class="buttons mb-3">
-              <a href="{{ route('comics.edit', $comic->id) }}" class="blue-button large me-2">EDIT</a>
+            <div class="buttons mb-3 d-flex flex-wrap">
+              <a href="{{ route('comics.edit', $comic->id) }}" class="blue-button large me-2 my-1">EDIT</a>
+              <form action="{{ route('comics.destroy', $comic->id) }}" method="POST">
+                @csrf
+                @method('DELETE')
+                <button class="blue-button large border-0 me-2 my-1">DELETE</a>
+              </form>
             </div>
           </div>
           @empty

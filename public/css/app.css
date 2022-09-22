@@ -10982,6 +10982,9 @@ footer .link-list {
   height: 140px;
   width: 140px;
 }
+.jumbotron .main-content figure figcaption {
+  min-height: 50px;
+}
 
 .blue-button {
   font-weight: bold;
