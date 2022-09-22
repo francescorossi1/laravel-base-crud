@@ -3,23 +3,23 @@
         <article class="py-4">
             <div class="container d-flex">
               <figure>
-                <img src="../img/buy-comics-digital-comics.png" alt="digital comics">
+                <img src="{{ asset('img/buy-comics-digital-comics.png') }}" alt="digital comics">
                 <span class="px-2">DIGITAL COMICS</span>
               </figure>
               <figure>
-                <img src="../img/buy-comics-merchandise.png" alt="merchandise">
+                <img src="{{ asset('img/buy-comics-merchandise.png') }}" alt="merchandise">
                 <span class="px-2">MERCHANDISE</span>
               </figure>
               <figure>
-                <img src="../img/buy-comics-subscriptions.png" alt="subscriptions">
+                <img src="{{ asset('img/buy-comics-subscriptions.png') }}" alt="subscriptions">
                 <span class="px-2">SUBSCRIPTIONS</span>
               </figure>
               <figure>
-                <img src="../img/buy-comics-shop-locator.png" alt="shop locator">
+                <img src="{{ asset('img/buy-comics-shop-locator.png') }}" alt="shop locator">
                 <span class="px-2">SHOP LOCATOR</span>
               </figure>
               <figure>
-                <img src="../img/buy-dc-power-visa.svg" alt="POWER VISA">
+                <img src="{{ asset('img/buy-dc-power-visa.svg') }}" alt="POWER VISA">
                 <span class="px-2">POWER VISA</span>
               </figure>
             </div>
